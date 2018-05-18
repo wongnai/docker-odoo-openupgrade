@@ -49,6 +49,7 @@ RUN pip3 install --ignore-installed git+https://github.com/OCA/openupgradelib.gi
 
 COPY ./odoo.conf.template /etc/odoo/
 
+EXPOSE 8069 8071
 ENV ODOO_RC /etc/odoo/odoo.conf
 
 ENTRYPOINT ["/entrypoint.sh"]
