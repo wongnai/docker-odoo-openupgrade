@@ -49,5 +49,7 @@ RUN pip3 install --ignore-installed git+https://github.com/OCA/openupgradelib.gi
 
 COPY ./odoo.conf.template /etc/odoo/
 
+ENV ODOO_RC /etc/odoo/odoo.conf
+
 ENTRYPOINT ["/entrypoint.sh"]
 CMD ["migrate"]
