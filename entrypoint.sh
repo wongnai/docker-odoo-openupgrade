@@ -25,7 +25,7 @@ DB_NAME=${DB_NAME:-wongnai}
 
 case "$1" in
     -- | migrate)
-        exec ./odoo-bin --update=all --database=$DB_NAME --config=/etc/odoo/odoo.conf --stop-after-init --no-xmlrpc
+        exec /var/lib/odoo/odoo-bin --update=all --database=$DB_NAME --config=/etc/odoo/odoo.conf --stop-after-init --no-xmlrpc
         ;;
     *)
         exec "$@"
